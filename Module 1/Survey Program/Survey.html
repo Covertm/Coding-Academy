@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demographic Survey</title>
+
+    <link rel="stylesheet" href="Survey.css">
+
+
+    <script>
+        function myFunction() {
+            var newname = document.getElementById("fname").value + " " + document.getElementById("Lname").value;
+            alert("Thank you " + newname + " for completing the Survey!" 
+            );
+        }
+    </script>
+</head>
+
+<body>
+    
+    <div class="survey-class">
+        <header class="header">
+            <h1 id="title" class="description text-center">Demographic Survey </h1>
+            
+            <p id="description" class="description text-center">
+                Thank you for taking the time to complete the survey.
+            </p>
+        </header>
+
+        <form id="survey-form" onsubmit="myfunction()">
+
+            <div class="form-group">
+
+                <br><title for="name-group">Name:</title>
+
+                <label id="fname" for="fname">First Name:</label><br>
+                <input type="text" id="fname" name="fname" class="form-control" placeholder="Enter First Name" required/><br>
+                
+                <br><label id="lname" for="lname">Last Name:</label><br>
+                <input type="text" id="lname" name="lname" class="form-control" placeholder="Enter Last Name" required/><br>
+                <br>
+
+            </div>
+
+            <div class="form-group">
+
+                <br><title for="contact-group">Contract Info:</title>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email Address" required/><br>
+
+                <br><label for="phone">Phone number:</label><br>
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="999-999-9999" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required/>
+                <br>
+        
+            </div>
+
+            <div class="form-group">
+
+                <br><title for="gender-group">Gender:</title>
+
+                <input type="radio" id="female" name="gender" value="Male"/>
+                <label for="Male">Male</label><br>
+
+                <input type="radio" id="female" name="gender" value="Female"/>
+                <label for="female">Female</label><br>
+
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label><br>
+
+            </div>
+
+
+            <div class="form-group">
+                <br><title for="age-group">Age:</title>
+            
+                <input type="radio" id="age1" name="age" value="Under 12 Years old">
+                <label for="age1"> Under 12 Years old</label><br>
+
+                <input type="radio" id="age2" name="age" value="12-17 Years old">
+                <label for="age1"> 12-17 Years old</label><br>
+
+                <input type="radio" id="age3" name="age" value="18-24 Years old">
+                <label for="age1"> 18-24 Years old</label><br>
+
+                <input type="radio" id="age4" name="age" value="25-34 Years old">
+                <label for="age1"> 25-34 Years old</label><br>
+
+                <input type="radio" id="age5" name="age" value="35-44 Years old">
+                <label for="age1"> 35-44 Years old</label><br>
+
+                <input type="radio" id="age6" name="age" value="45-54 Years old">
+                <label for="age1"> 45-54 Years old</label><br>
+
+                <input type="radio" id="age7" name="age" value="55-64 Years old">
+                <label for="age1"> 55-64 Years old</label><br>
+
+                <input type="radio" id="age8" name="age" value="65-74 Years old">
+                <label for="age1"> 65-74 Years old</label><br>
+
+                <input type="radio" id="age9" name="age" value="75 Years or older">
+                <label for="age1"> 75 Years or older</label><br>
+
+            </div>
+        
+            <div class="form-group">
+                <p>Please specify your ethnicity:</p>
+                <select id="dropdown" name="role" class="form-control" required>
+                <option disabled selected value>Select Ethnicity</option>
+                <option value="White">White</option>
+                <option value="HispanicLatino">Hispanic or Latino</option>
+                <option value="AfricanAmerican">Black or African American</option>
+                <option value="NativeAmerican">Native American or American Indian</option>
+                <option value="Asian">Asian / Pacific Islander</option>
+                <option value="preferNo">Prefer not to say</option>
+                <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <p>Any comments or suggestions?</p>
+                <textarea
+                  id="comments"
+                  class="input-textarea"
+                  name="comment"
+                  placeholder="Enter your comment here..."
+                ></textarea>
+              </div>
+
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">
+                      Submit
+                </button>            
+            </div>
+        </form>
+   
+    </div>
+</body>
+
+</html>
