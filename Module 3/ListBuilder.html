@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mitch's List Builder</title>
+
+    <link rel="stylesheet" href="ListBuilder.css">
+    <script src="ListBuilder.js"></script>
+
+<body>
+
+    <div class="MyFlexBoxRow1">
+        <div class="myflexboxColumn"></div>
+            <strong>List Builder</strong>
+        </div>        
+    </div>
+
+    <div class="MyFlexBoxRow2">
+        <div class="MyFlexBoxColumn2">
+            <form name="myForm">
+                <input type="text" name="InName" value="" Placeholder="Name to Add"><br />
+                <input type="number" name="InList" value="" Placeholder="Add to List 1 or 2" min="1" max="2"><br />
+                <input type="button" value="Add to list" onclick="AddToList()">
+            </form>
+        </div>
+
+        <div class="MyFlexBoxColumn3">
+            <label for="List1">List 1</label><br>
+            <table id=List1></table>
+            <button type="button" onclick=ResetList1()>Reset List 1</button>
+        </div>
+
+        <div class="MyFlexBoxColumn4">
+            <label for="List2">List 2</label><br>
+            <table id=List2></table>
+            <button type="button" onclick=ResetList2()>Reset List 2</button>
+        </div>      
+    </div>
+
+</body>
