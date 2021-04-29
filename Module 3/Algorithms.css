@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Container for flexboxes */
+  .MyFlexBoxRow1, .MyFlexBoxRow2 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Create four equal entries in myflexbox */
+  .MyFlexBoxRow1, .MyFlexBoxColumn2, .MyFlexBoxColumn3, .MyFlexBoxColumn4 {
+    flex: 25%;
+    padding: 20px;
+  }
+  
+  /* Media query - on screens that are 992px wide or less, go from four columns to two columns */
+  @media screen and (max-width: 992px) {
+    .MyFlexBoxRow1, .MyFlexBoxColumn2, .MyFlexBoxColumn3, .MyFlexBoxColumn4 {
+      flex: 50%;
+    }
+  }
+  
+  /* Media query - on screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .MyFlexBoxRow1, .MyFlexBoxColumn2, .MyFlexBoxColumn3, .MyFlexBoxColumn4 {
+      flex-direction: column;
+    }
+  }  
+
+  body {
+      background-color: lightslategray;
+  }
+
+  label {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline; 
+    font-size: 2rem;
+  }
+  
+  .MyFlexBoxRow1, .MyFlexBoxRow3 {
+    background-color: navy;
+    color: lightslategray;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+    font-size: 3rem;
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .myflexboxColumn, .myflexboxColumn5 {
+    background-color: navy;
+    color: lightslategray;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 3rem;
+  }
+
+  .MyFlexBoxColumn2 { 
+    background-color:lightslategray;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-size: 1rem;
+    margin-left: 20rem;
+  }
+
+  .MyFlexBoxColumn3, .MyFlexBoxColumn4 {
+    background-color:lightslategray;
+    color: navy;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-size: 2rem;
+  }
