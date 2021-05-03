@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Random Quote Exercise</title>
+
+    <link rel="stylesheet" href="RandomQuoteGenerator.css">
+    <script src="RandomQuoteGenerator.js"></script>
+    
+</head>
+<body>
+    <h1> Random Quote Generator Web Service API Exercise</h1>
+    <div class="myflexboxRow">
+        <div class="myflexboxColumn">
+            <label>Quote Length</label>
+            <select id="quoteLength">
+                <option value=50>Short</option>
+                <option value=100>Medium</option>
+                <option value=200>Long</option>
+            </select><br /><br />
+            <label>Quote Type</label>
+            <select id="Tags">
+                <option value="business">Business</option>
+                <option value="education">Education</option>
+                <option value="history">History</option>
+                <option value="inspirational">Inspirational</option>
+                <option value="nature">Nature</option>
+                <option value="science">Science</option>
+                <option value="success">Success</option>                
+                <option value="technology">Technology</option>
+                <option value="wisdom">Wisdom</option>           
+            </select><br><br>
+            <input type="button" value="Generate Quote" onclick="getRandomQuote()">
+        </div>
+
+        <div class="myflexboxColumn">
+            <h2>Quote:</h2>
+            <p id="Random-Quote"></p>
+            <p id="Author"></p>
+        </div>
+
+    </div>    
+</body>
+</html>

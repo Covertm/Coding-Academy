@@ -22,14 +22,15 @@
                 Maximum number: <input type="text" name="maxNum" id="maxNum" Placeholder="Enter Max Number" onchange="setMinMax()"><br><br>
                 <input type="number" name="InList" value="InList" Placeholder="Number between min/max"><br><br />
                 <input type="button" value="Add to list" onclick="AddToList()">
-                <br><br><br>
+                <br><br>
                 <input type="button" value="Reset Fields" onclick="ResetScreen()">
+
             </form>
         </div>
 
         <div class="MyFlexBoxColumn3">
             <h1>Integer List</h1><br>
-            <table id=List1></table>
+            <table id=List1 tagName="TD"></table>
         </div>
 
         <div class="MyFlexBoxColumn4">
@@ -37,7 +38,7 @@
             <label id="Mean">  </label><br>
             <label>Median:</label>
             <label id="median">  </label><br>
-            <label>Modes:</label>
+            <label>Mode(s):</label>
             <label id="modes">  </label><br>
         </div>      
     </div>

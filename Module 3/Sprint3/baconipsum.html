@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baconipsum Web Service API Exercise</title>
+
+    <link rel="stylesheet" href="baconipsum.css">
+    <script src="baconipsum.js"></script>
+</head>
+<body>
+    <h1> Baconipsum Web Service API Exercise</h1>
+    <div class="myflexboxRow">
+        <div class="myflexboxColumn">
+            <h2>User Input</h2>
+            <label>How many paragraphs?</label>
+            <select id="Paragraphs">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+            </select><br /><br />
+            <input type="button" value="Get my Bacon Ipsum!" onclick="getBaconipsum()">
+        </div>
+
+        <div class="myflexboxColumn">
+            <h2>JSON</h2>
+            <p id="RawData"></p>
+        </div>
+
+        <div class="myflexboxColumn">
+            <h2>Formatted Paragraph(s)</h2>
+            <p id="FormattedData"></p>
+        </div>
+
+    </div>    
+</body>
+</html>

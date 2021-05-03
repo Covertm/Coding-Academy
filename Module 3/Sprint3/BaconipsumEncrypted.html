@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitch's Baconipsum Encrypted - Exercise</title>
+
+    <link rel="stylesheet" href="BaconipsumEncrypted.css">
+    <script src="BaconipsumEncrypted.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <h1>Baconipsum Encrypted Web Service API Exercise</h1>
+    <div class="myflexboxRow">
+        <div class="myflexboxColumn">
+            <h2>Obtain user information</h2>
+            <label for="newType">All meat or meat with filler?</label>
+            <select id="newType">
+                <option value="all-meat">All meat</option>
+                <option value="meat-and-filler">Meat and filler</option>
+            </select><br />
+            <label for="newParagraphs">How many paragraphs?</label>
+            <select id="newParagraphs">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+            </select><br />
+            <label for="newFormat">Which algorithm do you want to encrypt the data?</label>
+            <select id="newFormat">
+                <option value="1">Algorithm 1</option>
+                <option value="2">Algorithm 2</option>
+                <option value="3">Algorithm 3</option>
+            </select>
+            <input type="button" value="Get my Bacon Ipsum!" onclick="getBaconipsum()">
+        </div>
+    </div>    
+    <div class="myflexboxRow2">
+        <div class="myflexboxColumn">
+            <h2>Raw JSON</h2>
+            <p id="RawData">
+            </p>
+        </div>
+        <div class="myflexboxColumn">
+            <h2>Formatted Paragraphs</h2>
+            <p id="FormattedData">
+            </p>
+        </div>
+        <div class="myflexboxColumn">
+            <h2>Encrypted Data</h2>
+            <p id="EncryptedData">
+            </p>
+        </div>
+    </div>    
+</body>
+</html>
