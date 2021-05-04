@@ -33,4 +33,4 @@ async function getUserRepos() {
     scroll(0,0);
 
     return true;
-  }
+}
