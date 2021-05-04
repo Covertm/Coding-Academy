@@ -20,15 +20,10 @@
     }
   }
 
-  body {
-    background-color: cornsilk;
-  }
-
-  .myflexboxColumn {
-    background-color: darkgray;
+  .myflexboxColumn, .myflexboxColumn2 {
+    background-color: rgb(206, 205, 205);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-    font-style: italic;
+    font-size: 1.5rem;
   }
 
   h1 {

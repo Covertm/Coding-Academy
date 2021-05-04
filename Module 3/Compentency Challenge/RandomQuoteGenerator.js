@@ -40,3 +40,23 @@ async function getRandomQuote() {
 
     return true;
   }
+
+  async function GetQuoteTypes() {
+
+    var apiString = "https://api.quotable.io/tags";
+    var response = await fetch(apiString);  
+    var jsonData = await response.json();
+
+    var tableref = document.getElementById("QuoteTypes");
+
+    for (var i = 0; i < tableref.rows.length; i++){
+        document.getElementById("QuoteTypes").innerHTML = "";    
+    }
+        
+    for (var i = 0; i < jsonData.length; i++) {
+        var QuoteType = jsonData[i].name;
+        (tableref.insertRow(tableref.rows.length)).innerHTML = QuoteType;
+    }      
+
+    return true;
+  }
