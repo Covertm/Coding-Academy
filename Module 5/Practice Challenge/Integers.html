@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mitch's Palindrome Algorithms</title>
+
+    <link rel="stylesheet" href="Integers.css">
+    <script src="Integers.js"></script>
+
+<body>
+
+    <div class="MyFlexBoxRow1">
+        <div class="myflexboxColumn"></div>
+            <strong>Calculate Integers</strong>
+        </div>        
+    </div>
+
+    <div class="MyFlexBoxRow2">
+        <div class="MyFlexBoxColumn2">
+            <form name="myForm">
+                Minimum number: <input type="text" name="minNum" id="minNum" Placeholder="Enter Min Number" onchange="setMinMax()"><br>
+                Maximum number: <input type="text" name="maxNum" id="maxNum" Placeholder="Enter Max Number" onchange="setMinMax()"><br><br>
+                <input type="number" name="InList" value="InList" Placeholder="Number between min/max"><br><br />
+                <input type="button" value="Add to list" onclick="AddToList()">
+                <br><br>
+                <input type="button" value="Reset Fields" onclick="ResetScreen()">
+
+            </form>
+        </div>
+
+        <div class="MyFlexBoxColumn3">
+            <h1>Integer List</h1><br>
+            <table id=List1 tagName="TD"></table>
+        </div>
+
+        <div class="MyFlexBoxColumn4">
+            <label>Mean:</label>
+            <label id="Mean">  </label><br>
+            <label>Median:</label>
+            <label id="median">  </label><br>
+            <label>Mode(s):</label>
+            <label id="modes">  </label><br>
+        </div>      
+    </div>
+
+</body>
