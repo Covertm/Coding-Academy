@@ -2,18 +2,13 @@
 exports.__esModule = true;
 function ResetScreen() {
     var tableRef;
-    tableRef = document.getElementById("List1");
-    tableRef.innerHTML = " ";
-    tableRef = document.getElementById("Mean");
-    tableRef.innerHTML = " ";
-    tableRef = document.getElementById("median");
-    tableRef.innerHTML = " ";
-    tableRef = document.getElementById("modes");
-    tableRef.innerHTML = " ";
-    tableRef = document.getElementById('minNum');
-    tableRef.disabled = false;
-    tableRef = document.getElementById('maxNum');
-    tableRef.disabled = false;
+    var MinMax;
+    tableRef = document.getElementById("List1").innerHTML = " ";
+    tableRef = document.getElementById("Mean").innerHTML = " ";
+    tableRef = document.getElementById("median").innerHTML = " ";
+    tableRef = document.getElementById("modes").innerHTML = " ";
+    MinMax = document.getElementById('minNum').disabled = false;
+    MinMax = document.getElementById('maxNum').disabled = false;
     document.forms["myForm"]["InList"].value = "";
     document.forms["myForm"]["minNum"].value = "";
     document.forms["myForm"]["maxNum"].value = "";
@@ -108,6 +103,9 @@ function Median() {
     document.getElementById("median").innerHTML = median.toString();
     return true;
 }
+//************************************************************** */    
+//*****************Mode***************************************** */    
+//************************************************************** */    
 function Mode() {
     var numbers = [];
     var List = document.getElementById("List1");

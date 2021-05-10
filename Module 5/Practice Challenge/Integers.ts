@@ -1,32 +1,27 @@
 export{}
 
-function ResetScreen():boolean {
+function ResetScreen() {
     
-    let tableRef: any;
+    let tableRef: String;
+    let MinMax: boolean;
     
-    tableRef = document.getElementById("List1")
-    tableRef.innerHTML = " ";
+    tableRef = (<HTMLInputElement> document.getElementById("List1")).innerHTML = " ";
 
-    tableRef = document.getElementById("Mean")
-    tableRef.innerHTML = " ";
+    tableRef = (<HTMLInputElement>document.getElementById("Mean")).innerHTML = " ";
 
-    tableRef = document.getElementById("median")
-    tableRef.innerHTML = " ";
+    tableRef = (<HTMLInputElement>document.getElementById("median")).innerHTML = " ";
 
-    tableRef = document.getElementById("modes")
-    tableRef.innerHTML = " ";
+    tableRef = (<HTMLInputElement>document.getElementById("modes")).innerHTML = " ";
 
-    tableRef = document.getElementById('minNum');
-    tableRef.disabled=false;
+    MinMax = (<HTMLInputElement> document.getElementById('minNum')).disabled=false;
 
-    tableRef = document.getElementById('maxNum');
-    tableRef.disabled=false;
+    MinMax = (<HTMLInputElement> document.getElementById('maxNum')).disabled=false;
 
     document.forms["myForm"]["InList"].value = "";
     document.forms["myForm"]["minNum"].value = "";
     document.forms["myForm"]["maxNum"].value = "";
-
-    return true;
+    
+    return;
 }
 
 function setMinMax():boolean {
@@ -111,7 +106,7 @@ function AddToList(): boolean {
 //************************************************************** */  
 function Mean(): boolean {
 
-    let List: any = document.getElementById("List1");
+    let List: HTMLTableElement = (<HTMLTableElement> document.getElementById("List1"));
     let sum: number = 0;
 
     for (let i: number = 0; i < List.rows.length; i++) {
@@ -151,6 +146,9 @@ function Median(): boolean {
     return true;
 }
 
+//************************************************************** */    
+//*****************Mode***************************************** */    
+//************************************************************** */    
 function Mode(): boolean {
 
     let numbers: Array<any> =[];
