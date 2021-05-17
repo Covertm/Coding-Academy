@@ -1,0 +1,121 @@
+.container {
+    max-width: 960px;
+  }
+  
+    /* Container for flexboxes */
+.BodyRow, .BodyColumn1, .BodyColumn2{
+    display: flex;
+}
+      
+/* Create four equal entries in myflexbox */
+.BodyRow, .BodyColumn1, .BodyColumn2{
+    flex: 50%;
+    padding: 50px;
+}
+      
+/* Media query - on screens that are 992px wide or less, go from four columns to two columns */
+    @media screen and (max-width: 992px) {
+    .BodyRow, .BodyColumn1, .BodyColumn2{
+        flex: 50%;
+    }
+}
+      
+/* Media query - on screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+    .BodyRow, .BodyColumn1, .BodyColumn2{
+        flex-direction: column;
+    }
+}  
+  
+.site-header {
+    background-color: rgba(0, 0, 0, .85);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+.site-header a {
+    color: #8e8e8e;
+    transition: color .15s ease-in-out;
+}
+  
+.site-header a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+}
+
+.List1{
+    text-align: left;
+}
+
+table, .container {
+	text-align: left;
+	margin-top: 5%;
+}
+
+h1 {
+    color: #4285f4 !important;
+    text-decoration: underline;
+    text-decoration-color:#4285f4 !important;
+    text-transform: capitalize;
+    text-decoration-style: dashed;
+}
+
+
+.btn-primary {
+    color: #fff;
+    background-color: #4285f4 !important;
+}
+
+.bg-dark{
+    color: #fff;
+    background-color: #4285f4 !important;
+}
+
+tr {
+	list-style: none;
+    font-size: 22px;
+	padding: 32px 60px;
+	color: rgb(70, 67, 67);
+	text-transform: capitalize;
+	font-weight: 600;
+	border: 2px solid #4285f4 !important;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	background: #e0e4eb !important;
+	transition: all 0.75s ease;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5 ease;
+}
+
+table:hover {
+	background: #76CFE0;
+}
+
+table > button {
+	font-weight: normal;
+	background: none;
+	border: none;
+	float: right;
+	color: #025f70;
+	font-weight: 800;
+}
+
+.done {
+	background: #947a04 !important;
+	color: #bead10;
+    text-decoration: line-through;
+}
+
+.delete {
+	display: none;
+}
+
+.UrgentTask {
+	background: #eb3018 !important;
+}
